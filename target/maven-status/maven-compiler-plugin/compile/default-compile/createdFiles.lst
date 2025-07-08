@@ -1,1 +1,8 @@
 org\jackfallas\system\Main.class
+org\jackfallas\db\Conexion.class
+org\jackfallas\controller\PurchasesDBController.class
+org\jackfallas\controller\LoginController.class
+org\jackfallas\controller\DashboardController.class
+org\jackfallas\controller\SettingsController.class
+org\jackfallas\controller\ProductsDBController.class
+org\jackfallas\controller\ClientDBController.class
