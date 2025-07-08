@@ -1,0 +1,38 @@
+.JFXBtn {
+    -fx-background-color: #33f9ff;
+    -fx-background-radius: 12px;
+    -fx-border-color: #121212;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-radius: 12px;
+    -fx-text-fill: #121212;
+    -fx-cursor: hand;
+    -fx-font-family: "Inter", "Arial", sans-serif;
+    -fx-font-size: 1.8em;
+    -fx-font-weight: bold;
+    -fx-padding: 0.5em 0.5em;
+    -fx-alignment: CENTER;
+    -fx-button-type: FLAT;
+    -fx-focus-traversable: true;
+    -jfx-disable-visual-focus: true;
+    -fx-transition: -fx-background-color 0.1s ease-out,
+                    -fx-scale-x 0.1s ease-out,
+                    -fx-scale-y 0.1s ease-out;
+}
+
+.JFXBtn:hover {
+    -fx-background-color: #F5F5F5;
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+}
+
+.JFXBtn:pressed {
+    -fx-background-color: #E0E0E0;
+    -fx-scale-x: 0.99;
+    -fx-scale-y: 0.99;
+}
+
+.JFXBtn:disabled {
+    -fx-opacity: 0.6;
+    -fx-cursor: default;
+}
