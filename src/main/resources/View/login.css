@@ -10,7 +10,7 @@
     -fx-font-family: "Inter", "Arial", sans-serif;
     -fx-font-size: 1.8em;
     -fx-font-weight: bold;
-    -fx-padding: 1em 1.2em;
+    -fx-padding: 0.5em 0.5em;
     -fx-alignment: CENTER;
     -fx-button-type: FLAT;
     -fx-focus-traversable: true;

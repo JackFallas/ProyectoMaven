@@ -43,7 +43,7 @@
                   <Font name="Century Gothic Italic" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="136.0" layoutY="462.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="129.0" styleClass="JFXBtn" stylesheets="@../resources/login.css" text="Login">
+            <Button layoutX="136.0" layoutY="475.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="146.0" styleClass="JFXBtn" stylesheets="@../../../../resources/View/login.css" text="Login">
                <font>
                   <Font size="11.0" />
                </font>
