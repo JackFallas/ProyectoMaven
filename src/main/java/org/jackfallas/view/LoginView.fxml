@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jackfallas.controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.jackfallas.controller.LoginController">
     <stylesheets>
-        <URL value="@/org/jackfallas/resources/login.css"/>
+        <URL value="@/org/jackfallas/resources/login.css" />
     </stylesheets>
+   <children>
+      <Pane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #33f9ff;">
+         <children>
+            <ImageView fitHeight="246.0" fitWidth="409.0" layoutX="-4.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="400.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="189.0" fitWidth="163.0" layoutX="119.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/img/Account_circle.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="91.0" layoutY="300.0" prefHeight="30.0" prefWidth="219.0" />
+            <Label layoutX="91.0" layoutY="370.0" prefHeight="30.0" prefWidth="118.0" text="Contraseña:">
+               <font>
+                  <Font name="Century Gothic Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField layoutX="91.0" layoutY="400.0" prefHeight="30.0" prefWidth="219.0" />
+            <Label layoutX="91.0" layoutY="263.0" prefHeight="30.0" prefWidth="118.0" text="Usuario:">
+               <font>
+                  <Font name="Century Gothic Italic" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="136.0" layoutY="462.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="129.0" styleClass="JFXBtn" stylesheets="@../resources/login.css" text="Login">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
