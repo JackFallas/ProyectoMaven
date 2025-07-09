@@ -3,12 +3,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image; // Aunque no se usa, lo mantengo por si lo necesitas
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.jackfallas.controller.ProductsDBController;
-import java.net.URL; // Importar la clase URL
-import java.io.IOException; // Importar IOException
-
+import java.net.URL; 
+import java.io.IOException;
 /**
  *
  * @author informatica
