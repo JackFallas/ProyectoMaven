@@ -21,7 +21,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         this.escenarioPrincipal = stage;
         escenarioPrincipal.setTitle("HyprLand");
-        productos();
+        factura();
         escenarioPrincipal.show(); 
     }
 
@@ -61,6 +61,40 @@ public class Main extends Application {
 
     public void productos() {
         FXMLLoader loadedLoader = cambiarEscena("ProductsDBView.fxml", 1280, 720);
+
+      
+        if (loadedLoader != null) {
+            Object controller = loadedLoader.getController();
+            if (controller instanceof ProductsDBController) {
+                ProductsDBController pdbc = (ProductsDBController) controller;
+                pdbc.setPrincipal(this);
+            } else {
+                System.err.println("Error: El controlador de PaginaInicio.fxml no es una instancia de ProductsDBController o es nulo.");
+              
+            }
+        } else {
+            System.err.println("No se pudo cargar ProductosDBView.fxml, no se puede configurar el controlador.");
+        }
+    }
+    public void clientes() {
+        FXMLLoader loadedLoader = cambiarEscena("ClientDBView.fxml", 1280, 720);
+
+      
+        if (loadedLoader != null) {
+            Object controller = loadedLoader.getController();
+            if (controller instanceof ProductsDBController) {
+                ProductsDBController pdbc = (ProductsDBController) controller;
+                pdbc.setPrincipal(this);
+            } else {
+                System.err.println("Error: El controlador de ClienteDBView.fxml no es una instancia de ClientDBController o es nulo.");
+              
+            }
+        } else {
+            System.err.println("No se pudo cargar ClientDBView.fxml, no se puede configurar el controlador.");
+        }
+    }
+    public void factura() {
+        FXMLLoader loadedLoader = cambiarEscena("FacturaView.fxml", 1280, 720);
 
       
         if (loadedLoader != null) {

@@ -1,10 +1,15 @@
+org\jackfallas\model\DetalleCompra.class
 org\jackfallas\controller\LoginController.class
 org\jackfallas\model\Products.class
 org\jackfallas\controller\DashboardController.class
 org\jackfallas\controller\ClientDBController.class
 org\jackfallas\controller\ProductsDBController$EstadoFormulario.class
 org\jackfallas\system\Main.class
+org\jackfallas\model\Client.class
 org\jackfallas\db\Conexion.class
 org\jackfallas\controller\PurchasesDBController.class
+org\jackfallas\controller\ClientDBController$EstadoFormulario.class
+org\jackfallas\controller\FacturaDBController$EstadoFormulario.class
+org\jackfallas\controller\FacturaDBController.class
 org\jackfallas\controller\SettingsController.class
 org\jackfallas\controller\ProductsDBController.class

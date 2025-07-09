@@ -1,14 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jackfallas.controller.ClientDBController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jackfallas.controller.ClientDBController">
     <stylesheets>
-        <URL value="@/org/jackfallas/resources/clientdb.css"/>
+        <URL value="@paginaprincipalview.css" />
     </stylesheets>
+    <children>
+        <Button fx:id="btnCerrarSesion" layoutX="1153.0" layoutY="37.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="85.0" AnchorPane.rightAnchor="42.0">
+            <font>
+                <Font name="Times New Roman" size="16.0" />
+            </font>
+        </Button>
+
+        <TableView fx:id="tablaClientes" layoutX="200.0" layoutY="190.0" prefHeight="288.0" prefWidth="674.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="406.0">
+            <columns>
+                <TableColumn fx:id="colIDCliente" prefWidth="48.0" text="ID" />
+                <TableColumn fx:id="colNombreCliente" prefWidth="136.0" text="Nombre" />
+                <TableColumn fx:id="colApellidoCliente" prefWidth="120.0" text="Apellido" />
+                <TableColumn fx:id="colNITCliente" prefWidth="200.0" text="NIT" />
+                </columns>
+        </TableView>
+
+        <TextField fx:id="txtBuscar" layoutX="200.0" layoutY="130.0" prefHeight="25.0" prefWidth="491.0" promptText="Buscar Nombre de Cliente" />
+        <Button fx:id="btnBuscar" layoutX="704.0" layoutY="135.0" minHeight="25.0" minWidth="36.0" mnemonicParsing="false" onAction="#btnBuscarCliente" />
+
+        <GridPane layoutX="914.0" layoutY="183.0" prefHeight="258.0" prefWidth="337.0" AnchorPane.rightAnchor="29.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="117.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="204.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+            <children>
+                <Label fx:id="lblIDCliente" text="ID Cliente:">
+                    <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblNombreCliente" text="Nombre:" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblApellidoCliente" text="Apellido:" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblNITCliente" text="NIT:" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtIDCliente" disable="true" prefHeight="25.0" prefWidth="258.0" GridPane.columnIndex="1" />
+                <TextField fx:id="txtNombreCliente" disable="true" prefHeight="25.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="txtApellidoCliente" disable="true" prefHeight="25.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="txtNITCliente" disable="true" prefHeight="25.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                </children>
+        </GridPane>
+
+        <GridPane layoutX="219.0" layoutY="491.0" prefHeight="91.0" prefWidth="652.0" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="409.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="btnRetroceder" minHeight="60.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnRetrocederAction" />
+                <Button fx:id="btnSiguiente" minHeight="60.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnSiguienteAction" GridPane.columnIndex="1" />
+                <Button fx:id="btnNuevo" minHeight="60.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnNuevoAction" GridPane.columnIndex="3" />
+                <Button fx:id="btnEliminar" minHeight="60.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnEliminarAction" GridPane.columnIndex="5" />
+                <Button fx:id="btnEditar" minHeight="60.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnEditarAction" GridPane.columnIndex="4" />
+            </children>
+        </GridPane>
+
+        <Label alignment="CENTER" layoutX="613.0" layoutY="49.0" prefHeight="51.0" prefWidth="255.0" text="Clientes">
+            <font>
+                <Font name="Verdana" size="40.0" />
+            </font>
+        </Label>
+    </children>
 </AnchorPane>

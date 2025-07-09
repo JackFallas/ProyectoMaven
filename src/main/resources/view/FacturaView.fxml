@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.jackfallas.controller.FacturaDBController">
+    <children>
+        <Label layoutX="30.0" layoutY="20.0" text="Gestión de Detalle de Factura">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <GridPane hgap="10" layoutX="30.0" layoutY="70.0" prefHeight="150.0" prefWidth="350.0" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="200.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="ID Detalle:" />
+                <TextField fx:id="txtIDDetalle" editable="false" promptText="Automático" GridPane.columnIndex="1" />
+
+                <Label text="Cliente:" GridPane.rowIndex="1" />
+                <ComboBox fx:id="cbxIDClient" prefWidth="200.0" promptText="Seleccionar Cliente" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Producto:" GridPane.rowIndex="2" />
+                <ComboBox fx:id="cbxIDProducts" prefWidth="200.0" promptText="Seleccionar Producto" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Fecha:" GridPane.rowIndex="3" />
+                <DatePicker fx:id="dpFecha" prefWidth="200.0" promptText="Seleccionar Fecha" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Total:" GridPane.rowIndex="4" />
+                <TextField fx:id="txtTotal" promptText="Total de la compra" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+
+        <HBox layoutX="400.0" layoutY="70.0" prefHeight="30.0" prefWidth="450.0" spacing="10">
+            <children>
+                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#btnNuevoAction" prefWidth="80.0" text="Nuevo" />
+                <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#btnEditarAction" prefWidth="80.0" text="Editar" />
+                <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#btnEliminarAction" prefWidth="80.0" text="Eliminar" />
+                <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#btnBuscarAction" prefWidth="80.0" text="Buscar" />
+                <TextField fx:id="txtBuscar" prefWidth="100.0" promptText="Buscar por ID" />
+            </children>
+        </HBox>
+        
+        <HBox layoutX="400.0" layoutY="110.0" prefHeight="30.0" prefWidth="200.0" spacing="10">
+            <children>
+                <Button fx:id="btnAnterior" mnemonicParsing="false" onAction="#btnAnteriorAction" prefWidth="90.0" text="Anterior" />
+                <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#btnSiguienteAction" prefWidth="90.0" text="Siguiente" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tablaDetalleFactura" layoutX="30.0" layoutY="250.0" prefHeight="300.0" prefWidth="840.0">
+            <columns>
+                <TableColumn fx:id="colIDDetalle" prefWidth="100.0" text="ID Detalle" />
+                <TableColumn fx:id="colIDCliente" prefWidth="150.0" text="ID Cliente" />
+                <TableColumn fx:id="colIDProducto" prefWidth="150.0" text="ID Producto" />
+                <TableColumn fx:id="colFecha" prefWidth="180.0" text="Fecha" />
+                <TableColumn fx:id="colTotal" prefWidth="150.0" text="Total" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
