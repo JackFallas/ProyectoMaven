@@ -1,7 +1,7 @@
 /* Estilos para un Label */
 .custom-label {
-    -fx-font-family: "Noto Sans Japanese"; /* Mismo font que la TableView */
-    -fx-text-fill: white; /* Color de texto blanco */
+    -fx-font-family: "Impact"; 
+    -fx-text-fill: white;
 }
 
 /* Estilos para un boton */
@@ -14,7 +14,7 @@
     -fx-border-radius: 12px;
     -fx-text-fill: #121212;
     -fx-cursor: hand;
-    -fx-font-family: "Inter", "Arial", sans-serif;
+    -fx-font-family: "Impact";
     -fx-font-size: 1em;
     -fx-font-weight: bold;
     -fx-padding: 0.5em 1.2em;
@@ -54,7 +54,7 @@
     -fx-table-cell-border-color: transparent; /* Eliminar bordes de celda si no se desean */
     -fx-border-radius: 15px; /* Bordes redondeados para la tabla completa */
     -fx-background-radius: 15px; /* Fondo redondeado para la tabla completa */
-    -fx-font-family: "Inter"; /* Un font bonito y moderno */
+    -fx-font-family: "Impact"; /* Un font bonito y moderno */
     -fx-font-size: 14px;
 }
 

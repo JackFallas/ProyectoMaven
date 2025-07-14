@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1a1a1a;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="org.jackfallas.controller.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1a1a1a;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jackfallas.controller.DashboardController">
     <stylesheets>
         <URL value="@/org/jackfallas/resources/dashboard.css" />
     </stylesheets>
@@ -81,6 +81,11 @@
          </image>
       </ImageView>
       <Button layoutX="451.0" layoutY="343.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="128.0" styleClass="JFXBtn" stylesheets="@dashboard.css" text="Añadir al carrito">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="9.0" layoutY="350.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="94.0" styleClass="JFXBtn" stylesheets="@dashboard.css" text="Ajustes">
          <font>
             <Font size="17.0" />
          </font>
