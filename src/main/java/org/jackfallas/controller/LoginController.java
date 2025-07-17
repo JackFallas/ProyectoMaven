@@ -7,6 +7,7 @@ package org.jackfallas.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import org.jackfallas.system.Main;
 
 /**
  * FXML Controller class
@@ -14,7 +15,16 @@ import javafx.fxml.Initializable;
  * @author informatica
  */
 public class LoginController implements Initializable {
-
+    
+    private Main principal;
+    
+    public void setPrincipal(Main principal) {
+        this.principal = principal;
+    }
+    
+    public void Dashboard() {
+        principal.Dashboard();
+    }
     /**
      * Initializes the controller class.
      */

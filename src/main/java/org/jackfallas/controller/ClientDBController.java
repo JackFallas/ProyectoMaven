@@ -37,7 +37,7 @@ public class ClientDBController implements Initializable {
     @FXML private TableColumn colIDCliente, colNombreCliente, colApellidoCliente, colNITCliente;
     private ObservableList<Client> listaClientes;
     private Client modeloCliente;
-
+    
     private enum EstadoFormulario {
         AGREGAR, ACTUALIZAR, NINGUNA
     };
@@ -45,6 +45,10 @@ public class ClientDBController implements Initializable {
 
     public void setPrincipal(Main principal) {
         this.principal = principal;
+    }
+    
+    public void Dashboard() {
+        principal.Dashboard();
     }
 
     @Override

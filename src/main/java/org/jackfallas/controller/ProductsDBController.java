@@ -56,7 +56,11 @@ public class ProductsDBController implements Initializable {
     public void setPrincipal(Main principal) {
         this.principal = principal;
     }
-
+    
+    public void Dashboard() {
+        principal.Dashboard();
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Inicializar los iconos de los botones en el estado NINGUNA

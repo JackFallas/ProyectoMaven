@@ -49,7 +49,7 @@ public class FacturaDBController implements Initializable {
     private ObservableList<DetalleCompra> listaDetalleFactura;
     private ObservableList<Client> listaClients;
     private ObservableList<Products> listaProducts;
-
+    
     private enum EstadoFormulario {
         AGREGAR, ELIMINAR, ACTUALIZAR, NINGUNA
     };
@@ -57,6 +57,10 @@ public class FacturaDBController implements Initializable {
 
     public void setPrincipal(Main principal) {
         this.principal = principal;
+    }
+    
+    public void Dashboard() {
+        principal.Dashboard();
     }
 
     @Override
